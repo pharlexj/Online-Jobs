@@ -90,7 +90,7 @@ export default function AuthDrawer({ open, onOpenChange, mode, onModeChange }: A
   const loginMutation = useMutation({
     mutationFn: async (data: z.infer<typeof loginSchema>) => {
       // For Replit Auth, we redirect to the login endpoint
-      window.location.href = '/api/login';
+      window.location.href = '/';
     },
     onError: (error) => {
       toast({
@@ -131,7 +131,7 @@ export default function AuthDrawer({ open, onOpenChange, mode, onModeChange }: A
         description: 'Your phone number has been verified successfully.',
       });
       // Now redirect to Replit auth
-      window.location.href = '/api/login';
+      window.location.href = '/';
     },
     onError: (error: any) => {
       toast({
@@ -186,7 +186,7 @@ export default function AuthDrawer({ open, onOpenChange, mode, onModeChange }: A
   };
 
   const handlePhoneLogin = () => {
-    window.location.href = '/api/login';
+    window.location.href = '/';
   };
 
   return (
